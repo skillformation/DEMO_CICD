@@ -1,11 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>À Propos de Moi - Francietta Erwan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for Inter font and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #374151; /* Dark gray text */
+        }
+
+        /* Custom animation classes for fade-in and slide-up */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframes for typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #6366f1; } /* Indigo 500 */
+        }
+
+        .typewriter h1 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid #6366f1; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .05em; /* Adjust as needed */
+            animation:
+                typing 5.5s steps(65, end), /* Adjusted steps and duration for longer, more impactful text */
+                blink-caret .75s step-end infinite;
+        }
+    </style>
 </head>
-<body>
-    welcome to madinina
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-gradient-to-br from-indigo-600 to-purple-700 flex items-center justify-center text-white p-4 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('https://placehold.co/1920x1080/ffffff/000000?text=Abstract+Tech+Pattern'); background-size: cover; background-position: center;"></div>
+        <div class="z-10 text-center space-y-6 fade-in-section">
+            <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <img src="https://placehold.co/128x128/6366f1/ffffff?text=Francietta+Erwan" alt="Photo de profil de Francietta Erwan" class="w-full h-full object-cover">
+            </div>
+            <div class="typewriter max-w-3xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
+                    Francietta Erwan : Redéfinir l'Innovation à l'Intersection du Web, de l'IA et de la Cybersécurité.
+                </h1>
+            </div>
+            <p class="text-lg sm:text-xl md:text-2xl mt-4 font-light">
+                Je conçois l'avenir du web : des solutions Laravel 12 d'une robustesse inégalée, propulsées par l'IA, et sécurisées par une expertise inébranlable.
+            </p>
+            <a href="#portfolio" class="inline-block bg-white text-indigo-700 hover:bg-indigo-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Découvrir mes projets
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white fade-in-section">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Ma Vision : L'Excellence par l'Innovation</h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                Je ne me contente pas de développer ; je crée des expériences. Mon expertise en Laravel 12 et en Intelligence Artificielle me permet de bâtir des architectures qui ne sont pas seulement performantes, mais qui redéfinissent ce qui est possible sur le web, avec une intuitivité et une évolutivité sans précédent.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Chaque ligne de code est une opportunité d'innover. Ma double maîtrise du développement web et de la cybersécurité assure non seulement la fonctionnalité, mais aussi une sécurité intrinsèque. Je suis obsédé par l'excellence, cherchant constamment à anticiper les besoins de demain pour livrer des solutions qui ne se contentent pas d'exister, elles transforment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 fade-in-section">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-10">Mes Compétences Clés</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1: AI Expert -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 7.5V4a1 1 0 011-1h2.5M19 7.5V4a1 1 0 00-1-1h-2.5M5 16.5V20a1 1 0 001 1h2.5M19 16.5V20a1 1 0 01-1 1h-2.5M10 12H4M20 12h-6m-9 0a9 9 0 1118 0M7 12a2 2 0 10-4 0 2 2 0 004 0zm14 0a2 2 0 10-4 0 2 2 0 004 0zm-9 0a2 2 0 10-4 0 2 2 0 004 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Intelligence Artificielle</h3>
+                    <p class="text-gray-600 text-center">
+                        Je donne vie à l'Intelligence Artificielle : des systèmes qui apprennent, anticipent et optimisent, transformant les données en décisions stratégiques.
+                    </p>
+                </div>
+
+                <!-- Skill Card 2: Laravel 12 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-red-500 mb-4">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Laravel 12 & PHP</h3>
+                    <p class="text-gray-600 text-center">
+                        Avec Laravel 12, je forge des backends d'une robustesse et d'une agilité exceptionnelles, des fondations sur lesquelles les innovations les plus audacieuses peuvent s'épanouir.
+                    </p>
+                </div>
+
+                <!-- Skill Card 3: Web Development & Cybersecurity -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cybersécurité & Frontend</h3>
+                    <p class="text-gray-600 text-center">
+                        La sécurité n'est pas une option, c'est un principe fondamental. Je construis des interfaces intuitives et esthétiques, dont la résilience est garantie par une expertise approfondie en cybersécurité.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (New) -->
+    <section id="portfolio" class="py-16 px-4 sm:px-6 lg:px-8 bg-white fade-in-section">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-10">Mes Réalisations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x400/a78bfa/ffffff?text=Projet+IA+Avancé" alt="Image du Projet IA Avancé" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Système de Recommandation IA</h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Développement d'un moteur de recommandation basé sur l'apprentissage automatique, améliorant l'engagement utilisateur de 30%.
+                        </p>
+                        <a href="#link-to-project-1" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">
+                            Voir le projet &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x400/f87171/ffffff?text=Application+Laravel+Sécurisée" alt="Image de l'Application Laravel Sécurisée" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Plateforme E-commerce Sécurisée</h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Conception et implémentation d'une plateforme e-commerce robuste avec Laravel 12, intégrant des mesures de sécurité avancées.
+                        </p>
+                        <a href="#link-to-project-2" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">
+                            Voir le projet &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x400/34d399/ffffff?text=Audit+Cybersécurité+Web" alt="Image de l'Audit Cybersécurité Web" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Audit de Sécurité et Optimisation</h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Réalisation d'audits de sécurité complets pour des applications web critiques, réduisant les vulnérabilités de 40%.
+                        </p>
+                        <a href="#link-to-project-3" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">
+                            Voir le projet &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact" class="inline-block mt-12 bg-indigo-600 text-white hover:bg-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Discutons de votre prochain défi
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-600 to-purple-700 text-white text-center fade-in-section">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6">L'Avenir vous attend. Discutons-en.</h2>
+            <p class="text-lg leading-relaxed mb-8">
+                Si vous êtes prêt à repousser les limites, à transformer l'impossible en réalité, ou à sécuriser votre vision, contactez-moi. Ensemble, nous bâtirons l'extraordinaire.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:votre.email@example.com" class="inline-block bg-white text-indigo-700 hover:bg-indigo-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    Envoyer un Email
+                </a>
+                <a href="https://linkedin.com/in/votreprofil" target="_blank" rel="noopener noreferrer" class="inline-block bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-gray-800 text-white text-center text-sm">
+        <p>&copy; 2024 Francietta Erwan. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // JavaScript for fade-in-section animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in-section');
+
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px',
+                threshold: 0.1 // 10% of the section must be visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
